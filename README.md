@@ -24,6 +24,6 @@ Algorithm with C++ : [Play-with-Algorithm](https://github.com/liuyubobobo/Play-w
 
 ## 進版圖 ~~*(My posture while writing C++)*~~
 
-> 戦場ヶ原　蕩れ！？
+> *戦場ヶ原　蕩れ！？*
 
 ![image](wallpaper473.png)
