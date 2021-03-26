@@ -7,7 +7,7 @@ using namespace std;
 template <typename T>
 void insertion_sort(T arr[], int n){
     for (int i = 1; i < n; ++i){
-        /* 若要換位，改成覆蓋取代 swap */
+        /* 若要換位，改成逐一覆蓋來取代 swap */
         T tmp = arr[i];
         int j; // 即將插入點
         for (j = i - 1; j >= 0 && arr[j] > tmp; --j){

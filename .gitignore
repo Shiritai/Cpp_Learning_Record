@@ -1,4 +1,6 @@
 *.exe
 tempCodeRunnerFile.c
 .vscode
+*.zip
+*.o
 Free_Test
