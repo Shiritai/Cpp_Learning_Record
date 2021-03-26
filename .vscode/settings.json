@@ -68,7 +68,9 @@
         "io.h": "c",
         "string": "c",
         "50039.C": "cpp",
-        "string.h": "c"
+        "string.h": "c",
+        "algorithm": "cpp",
+        "xstring": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cSpell.words": [
