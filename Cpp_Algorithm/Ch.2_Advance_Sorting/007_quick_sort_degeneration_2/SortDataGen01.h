@@ -66,10 +66,10 @@ namespace SortDataGen01{
         clock_t start = clock();
         sort(arr, n);
         clock_t end = clock();
-        bool correct = isSorted(arr, n);
-        if (!correct)
+        bool incorrect = isSorted(arr, n);
+        if (!incorrect)
             cout << "The array has not been sorted by " << nameOfSort <<" yet!\n";
-        assert(correct);
+        assert(incorrect);
         cout << nameOfSort << " : " << ((double) end - start) / CLOCKS_PER_SEC << " sec\n";
         return;
     }

@@ -70,7 +70,20 @@
         "50039.C": "cpp",
         "string.h": "c",
         "algorithm": "cpp",
-        "xstring": "cpp"
+        "xstring": "cpp",
+        "cstddef": "cpp",
+        "ios": "cpp",
+        "memory": "cpp",
+        "xfacet": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocnum": "cpp",
+        "xmemory": "cpp",
+        "xmemory0": "cpp",
+        "xstddef": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cSpell.words": [
