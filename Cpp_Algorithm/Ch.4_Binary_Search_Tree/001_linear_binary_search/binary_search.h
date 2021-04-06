@@ -5,7 +5,7 @@ using namespace std;
 
 /* find the indice of certain element, return -1 if the element DNE */
 template <typename T>
-int binary_search(T arr[], int n, T target){
+int binary_search(T arr[], int n, T target){ // O(log(n))
     int l = 0, r = n - 1; // 在 arr[l ~ r] 中尋找 target
     while (l <= r){
         // int mid = (l + r) / 2; // bug!!!
