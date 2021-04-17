@@ -118,7 +118,6 @@ void console(void){
                 cin >> i >> n >> c >> m >> s >> e;
                 data.push_back(student(i, n, c, m, s, e));
                 break;
-
             }
             case CHANGE_SCORE:{
                 if (data.empty()){

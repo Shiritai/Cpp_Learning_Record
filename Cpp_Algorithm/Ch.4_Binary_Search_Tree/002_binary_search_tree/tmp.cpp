@@ -1,6 +1,7 @@
 # include <iostream>
 # include <string>
 # include <vector>
+# include <map>
 # include "BST.h"
 
 using namespace std;

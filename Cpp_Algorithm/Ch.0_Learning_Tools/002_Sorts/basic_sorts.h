@@ -24,14 +24,14 @@ namespace basic_sorts{
     template <typename T>
     void selection_sort(T arr[], int n){
         int min_ind, max_ind; // find min and max value in the range of [i, n - i)
-        for (int i = 0; i < n / 2; ++i){
+        for (int i = 0; i <= n / 2; ++i){
             min_ind = i, max_ind = n - i - 1;
-            for (int j = i + 1; j < n - i; ++j){
+            for (int j = i; j < n - i; ++j){
                 min_ind = (arr[j] < arr[min_ind]) ? j : min_ind;
                 max_ind = (arr[j] > arr[max_ind]) ? j : max_ind;
             }
             swap(arr[i], arr[min_ind]);
-            swap(arr[n - i - 1], arr[max_ind]);
+            swap(arr[n - i - 1], arr[(i != max_ind) ? max_ind : min_ind]);
         }
     }
 
@@ -55,10 +55,10 @@ namespace basic_sorts{
         }
     }
 
-    /* Advance version of bubble sort */
+    /* Optimized version of bubble sort */
     template <typename T>
     void bubble_sort(T arr[], int n){
-        int lastSwap; // Optimization 2
+        int lastSwap;
         for (int i = n - 1; i > 0; --i){
             lastSwap = 0;
             for (int j = 0; j < i; ++j){
