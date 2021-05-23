@@ -7,7 +7,7 @@
 
     "code-runner.runInTerminal": true, // 設定成false會在「輸出」中輸出，無法輸入
     "code-runner.executorMap": {
-        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -O2 -m64 -static-libgcc -std=c++11 -fexec-charset=BIG5 && &'./$fileNameWithoutExt.exe'",
+        "cpp": "g++ '$fileName' -o '$fileNameWithoutExt.exe' -Wall -O2 -m64 -static-libgcc -std=c++17 -fexec-charset=BIG5 && &'./$fileNameWithoutExt.exe'",
         "c": "gcc '$fileName' -o '$fileNameWithoutExt.exe' -Wall -O2 -m64 -lm -static-libgcc -std=c99 -fexec-charset=BIG5 && &'./$fileNameWithoutExt.exe'",
         // "c": "gcc $fileName -o $fileNameWithoutExt.exe -Wall -O2 -m64 -lm -static-libgcc -std=c11 -fexec-charset=GBK && $dir$fileNameWithoutExt.exe",
         // "cpp": "g++ $fileName -o $fileNameWithoutExt.exe -Wall -O2 -m64 -static-libgcc -std=c++14 -fexec-charset=GBK && $dir$fileNameWithoutExt.exe"
@@ -90,7 +90,33 @@
         "queue": "cpp",
         "set": "cpp",
         "bitset": "cpp",
-        "xhash": "cpp"
+        "xhash": "cpp",
+        "atomic": "cpp",
+        "cfenv": "cpp",
+        "complex": "cpp",
+        "csetjmp": "cpp",
+        "csignal": "cpp",
+        "forward_list": "cpp",
+        "future": "cpp",
+        "iterator": "cpp",
+        "locale": "cpp",
+        "random": "cpp",
+        "regex": "cpp",
+        "scoped_allocator": "cpp",
+        "stack": "cpp",
+        "typeindex": "cpp",
+        "unordered_set": "cpp",
+        "valarray": "cpp",
+        "xlocbuf": "cpp",
+        "xlocmes": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp",
+        "xxatomic": "cpp",
+        "*.rh": "cpp",
+        "ccomplex": "cpp",
+        "cstdalign": "cpp",
+        "cstdbool": "cpp",
+        "ctgmath": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "cSpell.words": [

@@ -147,7 +147,7 @@ private:
         Node * tmp = cur;
         while (tmp->left != NULL)
             tmp = tmp->left;
-        return tmp->key;
+        return tmp;
     }
 
     Node * maximum(Node * cur){
@@ -155,7 +155,7 @@ private:
         Node * tmp = cur;
         while (tmp->right != NULL)
             tmp = tmp->right;
-        return tmp->key;
+        return tmp;
     }
 
     /* 刪除當前根以下之最小節點, return 新的根 */

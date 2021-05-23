@@ -127,14 +127,14 @@ namespace merge_quick {
         */
         template<typename T>
         static int partition(T arr[], int l, int r){
-            int LHS = l;
+            int MID = l;
             T mid_e = arr[l];
             for (int i = l + 1; i <= r; ++i){
                 if (arr[i] < mid_e)
-                    swap(arr[++LHS], arr[i]);
+                    swap(arr[++MID], arr[i]);
             }
-            swap(arr[LHS], arr[l]);
-            return LHS;
+            swap(arr[MID], arr[l]);
+            return MID;
         }
     };
 

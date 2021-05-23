@@ -41,14 +41,14 @@ private:
          * 從而避免退化成 O(n^2) 
          * */
         swap(arr[l], arr[rand() % (r - l + 1) + l]);
-        int LHS = l;
+        int MID = l;
         T mid_e = arr[l];
         for (int i = l + 1; i <= r; ++i){
             if (arr[i] < mid_e)
-                swap(arr[++LHS], arr[i]);
+                swap(arr[++MID], arr[i]);
         }
-        swap(arr[LHS], arr[l]);
-        return LHS;
+        swap(arr[MID], arr[l]);
+        return MID;
     }
     template <typename T>
     static void insertion_sort(T arr[], int l, int r){
