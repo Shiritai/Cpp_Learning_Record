@@ -10,10 +10,9 @@ using namespace std;
  * Minimun Span Tree 問題
  * 
  * 利用切分定理 (Cut Property), 
- * 每次僅需為各個單點保留最短距離的邊, 
- * 因此改用 Index MinHeap 做為資料結構
- * 方便以索引的方式紀錄可以訪問單點的最短距離
- * */
+ * 每次訪問最短距離的鄰近單點, 並取得所有該單點未存取的邊
+ * 使用 MinHeap 做為資料結構
+ **/
 template <typename Graph, typename Weight>
 class PrimMST {
 private:

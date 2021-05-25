@@ -6,6 +6,13 @@
 
 using namespace std;
 
+/**
+ * Minimun Span Tree 問題
+ * 
+ * 利用切分定理 (Cut Property), 
+ * 每次訪問最短距離的鄰近單點, 並取得所有該單點未存取的邊
+ * 使用 MinHeap 做為資料結構
+ **/
 template <typename Graph, typename Weight>
 class LazyPrimMST {
 private:
@@ -15,9 +22,10 @@ private:
     vector<Edge<Weight>> mst;
     Weight mstWeight;
 
+    /* 訪問 : 將所有未進入優先隊列的邊加入優先隊列中 */
     void visit(int v){
         assert(!marked[v]);
-        marked[v] = true;
+        marked[v] = true; // 標記為已訪問
 
         typename Graph::adjIterator adj(G, v);
         for (Edge<Weight> * e = adj.begin(); !adj.end(); e = adj.next())

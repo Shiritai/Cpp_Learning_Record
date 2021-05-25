@@ -5,7 +5,7 @@
 using namespace std;
 
 int main(void){
-    int n = 10000000;
+    int n = 100000000;
 
     auto qstu = unionfind::QuickestUnion(n); // 甚至 n = 10 ^ 8 只花 12 秒...
     UnionFindHelper::testUnionFind(qstu, n, "Quickest Union");
