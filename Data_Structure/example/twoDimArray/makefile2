@@ -1,0 +1,31 @@
+# How to run this (under unix):
+# make time0 --makefile=makefile2
+# make time3 --makefile=makefile2
+# make timeFast --makefile=makefile2
+
+time0: row0 col0
+	time -p ./row0; time -p ./col0
+
+row0: row.cpp matrixSum.cpp matrixSum.h
+	gcc -O0 row.cpp matrixSum.cpp -o row0
+
+col0: col.cpp matrixSum.cpp matrixSum.h
+	gcc -O0 col.cpp matrixSum.cpp -o col0
+
+time3: row3 col3
+	time -p ./row3; time -p ./col3
+
+row3: row.cpp matrixSum.cpp matrixSum.h
+	gcc -O3 row.cpp matrixSum.cpp -o row3
+
+col3: col.cpp matrixSum.cpp matrixSum.h
+	gcc -O3 col.cpp matrixSum.cpp -o col3
+
+timeFast: rowFast colFast
+	time -p ./rowFast; time -p ./colFast
+
+rowFast: row.cpp matrixSum.cpp matrixSum.h
+	gcc -Ofast row.cpp matrixSum.cpp -o rowFast
+
+colFast: col.cpp matrixSum.cpp matrixSum.h
+	gcc -Ofast col.cpp matrixSum.cpp -o colFast

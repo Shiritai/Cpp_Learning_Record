@@ -23,7 +23,7 @@ void selection_sort(T arr[], int n){
         int min_ind = i; // find minimal val in the range of [i, n)
         for (int j = i + 1; j < n; ++j)
             min_ind = (arr[j] < arr[min_ind]) ? j : min_ind;
-        swap(arr[i], arr[min_ind]); // 當然有 swap 這麼香的東西...用了不虧，而且只有基本型變數可以用小花招...
+        swap(arr[i], arr[min_ind]); // 當然有 swap 這麼香的東西...比起小花招，用了不虧，而且只有基本型變數可以用小花招...
     }
 }
 
