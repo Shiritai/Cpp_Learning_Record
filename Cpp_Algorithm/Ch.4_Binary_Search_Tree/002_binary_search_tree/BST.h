@@ -203,9 +203,9 @@ private:
             return successor;
         }
         else if (key < cur->key)
-            cur = remove(cur->left, key);
+            cur->left = remove(cur->left, key);
         else // key > cur->key
-            cur = remove(cur->right, key);
+            cur->right = remove(cur->right, key);
         return cur;
     }
 
