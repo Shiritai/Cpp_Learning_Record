@@ -12,7 +12,7 @@ using namespace std;
 /** 
  * Shortest Path 問題
  * 
- * Dijkstra Algorithm
+ * n
  * 默認使用在無 「負權邊」 的圖
  * 
  * 尋找 origin 至各點的最短路徑,
