@@ -5,7 +5,7 @@
 int main(){
     static int list[LEN];
     list[0] = 0;
-    for (int i = 1; i < LEN; ++i){
+    for (int i = 1; i < LEN; ++i){`
         list[i] = list[i - 1];
         for (int j = i; j; j /= 10)
             list[i] += (j % 10 == 1);
