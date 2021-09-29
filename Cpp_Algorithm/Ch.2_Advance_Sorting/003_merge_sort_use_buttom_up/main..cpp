@@ -13,8 +13,8 @@ public:
          * Bottom up 的 Merge sort 會比 Recur 的還要慢一些
          * 注意此方法沒有使用到陣列的索引，因此適合拿來幫鏈結序列排序
          * */
-        for (int size = 1; size < n; size += size)
-            for (int i = 0; i + size < n /* 確保 i + size 存在 */; i += size + size)
+        for (int size = 1; size < n; size <<= 1)
+            for (int i = 0; i + size < n /* 確保 i + size 存在 */; i += (size << 1))
                 Merge::merge(arr, i, i + size - 1, min(i + size + size - 1, n - 1));
     }
 private:
