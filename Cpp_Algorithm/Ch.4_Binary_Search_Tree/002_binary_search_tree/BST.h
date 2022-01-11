@@ -48,6 +48,27 @@ private:
         return cur;
     }
 
+    void insertNonRec(Node * cur, K key, V value){
+        if (!cur)
+            return;
+        while (true){
+            if (key > cur->key && cur->right)
+                cur = cur->right;
+            else if (key < cur->key && cur->left)
+                cur = cur->left;
+            else if (key == cur->key){
+                cur->value = value;
+                return;
+            }
+            else 
+                break;
+        }
+        if (key > cur->key)
+            cur->right = new Node(key, value);
+        else 
+            cur->left = new Node(key, value);
+    }
+
     bool contain(Node * cur, K key){
         if (cur == NULL) // basis
             return false;

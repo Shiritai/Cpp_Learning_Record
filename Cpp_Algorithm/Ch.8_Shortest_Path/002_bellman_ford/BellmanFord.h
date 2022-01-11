@@ -16,13 +16,6 @@ using namespace std;
  * Complexity : O(E * V) (低效)
  * 允許負權邊, 並且可以用來偵測是否有負權環
  * 
- * 尋找 origin 至各點的最短路徑,
- * 每次 Greedy 的取得相鄰點的最短邊,
- * 並隨之使用 Relaxation,
- * 更新 origin 至各點的最短距離,
- * 直到所有點都被訪問, Relaxed,
- * 類似 Prim (MST algo), 採用 Index MinHeap 作為資結
- * 
  * 優化形式 : Queue-Based Bellman-Ford algo
  */
 template <typename Graph, typename Weight>
@@ -33,15 +26,14 @@ private:
     Weight * distTo;
     vector<Edge<Weight> *> path;
 
-    bool hasNegativeCycle;
+    const bool hasNegativeCycle;
 
     bool detectNegativeCycle(){
         for (int i = 0; i < G.V(); ++i){
             typename Graph::adjIterator adj(G, i);
-            for (Edge<Weight> * e = adj.begin(); !adj.end(); e = adj.next()){
+            for (Edge<Weight> * e = adj.begin(); !adj.end(); e = adj.next())
                 if (!path[e->to()] || distTo[e->from()] + e->weight() < distTo[e->to()])
-                    return true;
-            }
+                    return true; // 因為還可以鬆弛
         }
         return false;
     }
